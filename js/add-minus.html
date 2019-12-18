@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <script lang="javascript">
+        var num = 0;
+        function PlusOne() { num++; display(); }
+        function MinusOne() { num--; display(); }
+        function display() {
+            var inpCtrl = document.getElementById("num");
+            inpCtrl.value = num;
+
+            if(num%3==0) {
+                inpCtrl.style.color = "red";
+            } 
+            else {
+                inpCtrl.style.color = "black";
+            }
+
+            if(num%5==0) {
+                inpCtrl.style.fontWeight = "bold";
+            }
+            else {
+                inpCtrl.style.fontWeight = "normal";
+            }
+
+            if(num%7==0) {
+                inpCtrl.style.fontStyle = "italic";
+            }
+            else {
+                inpCtrl.style.fontStyle = "normal";
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <button onclick="MinusOne()">-</button>
+    <input id="num" type="number" value="0" disabled>
+    <button onclick="PlusOne()">+</button>
+</body>
+</html>
